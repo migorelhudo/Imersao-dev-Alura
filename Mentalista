@@ -1,0 +1,29 @@
+numeroSecreto = 0
+while (numeroSecreto == 0){
+  var numeroSecreto = parseInt(Math.random() * 1001)
+}
+var tentativas = 0
+var chute = 0
+while(chute != numeroSecreto){
+    chute = prompt("Digite um número entre 1 e 1000!")
+    tentativas += 1
+    if (chute == numeroSecreto){
+      if (tentativas == 1){
+        alert("Parabéns, você acertou com " + tentativas + " tentativa! O número " + chute + " é o correto.")
+      } else {
+        alert("Parabéns, você acertou com " + tentativas + " tentativas! O número " + chute + " é o correto.")
+      }
+    } else if (chute > numeroSecreto){
+      if (tentativas == 1){
+        alert("Com "+ chute + " você chutou alto! O número secreto é menor. " + tentativas + " tentativa.")
+      } else {
+        alert("Com "+ chute + " você chutou alto! O número secreto é menor. " + tentativas + " tentativas.")
+      }
+    } else if (chute < numeroSecreto){
+      if (tentativas == 1){
+        alert("Com " + chute + " você chutou baixo! O número secreto é maior. " + tentativas + " tentativa.")
+      } else {
+        alert("Com " + chute + " você chutou baixo! O número secreto é maior. " + tentativas + " tentativas.")
+      }
+      }
+  }
